@@ -13,5 +13,5 @@ In this project, I will use data provided by Motivate(opens in a new tab), a bik
 bikeshare.py
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+No reference
 
