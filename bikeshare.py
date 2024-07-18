@@ -25,7 +25,7 @@ def get_filters():
             city = selectionCity.lower()
             break
         else:
-            print('Invalid input')
+            print('Invalid input please try again')
 
     # get user input for month (all, january, february, ... , june). Print Invalid input if input is not match
     while True:
@@ -34,7 +34,7 @@ def get_filters():
             month = selectionMonth.lower()
             break
         else:
-            print('Invalid input')
+            print('Invalid input please try again')
 
     # get user input for day of week (all, monday, tuesday, ... sunday). Print Invalid input if input is not match
     while True:
@@ -43,9 +43,9 @@ def get_filters():
             day = selectionDay.lower()
             break
         else:
-            print('Invalid input')
+            print('Invalid input please try again')
 
-    print('-'*40)
+    print('-'*60)
     return city, month, day
     
 
@@ -111,7 +111,7 @@ def time_stats(df):
     print('Most common start hour:', popular_start_hour)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*60)
 
 
 def station_stats(df):
@@ -134,7 +134,7 @@ def station_stats(df):
     print('Most frequent combination of start station and end station trip:', frequent_combination)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*60)
 
 
 def trip_duration_stats(df):
@@ -152,7 +152,7 @@ def trip_duration_stats(df):
     print('Mean travel time:', mean_travel_time)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*60)
 
 
 def user_stats(df):
@@ -175,24 +175,24 @@ def user_stats(df):
     # TO DO: Display earliest, most recent, and most common year of birth
     try:
         earliest_birth = min(df['Birth Year'])
-        print('Earliest year of birth', earliest_birth)
+        print('Earliest year of birth:', earliest_birth)
     except:
         pass
         
     try:
         most_recent_birth = max(df['Birth Year'])
-        print('Most recent year of birth', most_recent_birth)
+        print('Most recent year of birth:', most_recent_birth)
     except:
         pass
 
     try:
         most_common_birth = df['Birth Year'].mode()[0]
-        print('Most common year of birth', most_common_birth)
+        print('Most common year of birth:', most_common_birth)
     except:
         pass
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*60)
 
 def get_raw_data(df):
     """Display raw data upon request by the user."""
